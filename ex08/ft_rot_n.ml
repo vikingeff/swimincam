@@ -10,31 +10,49 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
-let is_letter c = c >= 'A' && c <= 'z'
-
-let rotate_n rot c =
-	let letter = int_of_char c in
-		if (letter >= 65 || letter <= 90) || (letter >= 97 || letter <= 122) then
-			char_of_int (letter+ (rot mod 26))
-		else
-			c
+let is_lower c = c >= 'a' && c <= 'z'
+let is_upper c = c >= 'A' && c <= 'Z'
 
 let ft_rot_n rot str =
-	String.map rotate_n (rot str) str  
+	let rotation = rot mod 26 in
+	let rotate_n c =
+		let letter = int_of_char c in
+		if (is_lower c) then
+			begin
+				if ((letter + rotation) > int_of_char 'z') then
+					char_of_int (int_of_char 'a' + letter + rotation - int_of_char 'z' - 1)
+				else
+					char_of_int (letter + rotation)
+			end
+		else if (is_upper c) then
+			begin
+				if (letter + rotation > int_of_char 'Z') then
+					char_of_int (int_of_char 'A' + letter + rotation - int_of_char 'Z' - 1)
+				else
+					char_of_int (letter + rotation)
+			end
+		else c
+	in String.map rotate_n str
 
 let main () =
-	(*print_string "[Hello world !] is palindrome : ";
-	print_endline (string_of_bool (ft_palindrome "Hello world !"));
-	print_string "[rafar] is palindrome : ";
-	print_endline (string_of_bool (ft_palindrome "rafar"));
-	print_string "[maoam] is palindrome : ";
-	print_endline (string_of_bool (ft_palindrome "maoam"));
-	print_string "[123321] is palindrome : ";
-	print_endline (string_of_bool (ft_palindrome "123321"));
-	print_string "[MAchinTruXC] is palindrome : ";
-	print_endline (string_of_bool (ft_palindrome "MAchinTruXC"));
-	print_string "[raftar] is palindrome : ";
-	print_endline (string_of_bool (ft_palindrome "raftar"))*)
+	print_string "rot 1 of [abcdefghijklmnopqrstuvwxyz] becomes : ";
+	print_endline (ft_rot_n 1 "abcdefghijklmnopqrstuvwxyz");
+	print_string "rot 13 of [abcdefghijklmnopqrstuvwxyz] becomes : ";
+	print_endline (ft_rot_n 13 "abcdefghijklmnopqrstuvwxyz");
+	print_string "rot 13 of [abcdefghijklmNOPQRSTUVWXYZ] becomes : ";
+	print_endline (ft_rot_n 13 "abcdefghijklmNOPQRSTUVWXYZ");
+	print_string "rot 42 of [0123456789] becomes : ";
+	print_endline (ft_rot_n 42 "0123456789");
+	print_string "rot 2 of [OI2EAS67B9] becomes : ";
+	print_endline (ft_rot_n 2 "OI2EAS67B9");
+	print_string "rot 0 of [Damned !] becomes : ";
+	print_endline (ft_rot_n 0 "Damned !");
+	print_string "rot 8 of [Damned !] becomes : ";
+	print_endline (ft_rot_n 8 "Damned !");
+	print_string "rot 42 of [] becomes : ";
+	print_endline (ft_rot_n 42 "");
+	print_string "rot 1 of [NBzlk qnbjr !] becomes : ";
+	print_endline (ft_rot_n 1 "NBzlk qnbjr !")
 
 (* ************************************************************************** *)
 let () = main ()
