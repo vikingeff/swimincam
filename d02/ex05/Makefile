@@ -6,13 +6,13 @@
 #    By: gleger <gleger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/01/18 17:03:33 by gleger            #+#    #+#              #
-#    Updated: 2015/06/18 20:48:48 by gleger           ###   ########.fr        #
+#    Updated: 2015/06/18 20:48:28 by gleger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	gray
+NAME =	helix
 
-SRC =	gray.ml
+SRC =	helix.ml
 
 OBJ =	$(SRC:.ml=.cmo)
 OPTOBJ = $(SRC:.ml=.cmx)

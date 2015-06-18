@@ -6,13 +6,11 @@
 #    By: gleger <gleger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/01/18 17:03:33 by gleger            #+#    #+#              #
-#    Updated: 2015/06/18 17:37:01 by gleger           ###   ########.fr        #
+#    Updated: 2015/06/18 20:48:57 by gleger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	crossover
-
-HEADERS = -I .
 
 SRC =	crossover.ml
 
