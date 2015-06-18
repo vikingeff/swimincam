@@ -1,0 +1,5 @@
+RESULT =
+SOURCES =
+LIBS =
+OCAMLMAKEFILE = OCamlMakefile
+include $(OCAMLMAKEFILE)

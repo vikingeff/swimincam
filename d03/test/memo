@@ -1,0 +1,7 @@
+brew install opam
+opam init
+opam update
+opam switch 4.02.0
+eval `opam config env`
+opam install ocamlfind
+10:26 ls `ocamlc -where`/graphics*
