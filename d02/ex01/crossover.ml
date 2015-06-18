@@ -47,6 +47,8 @@ let main () =
 	print_list (rev_list(crossover [1;2;3] [])) print_int;
 	print_string ("crossover [3;2;1] [1;2;3] ---> ");
 	print_list (rev_list(crossover [3;2;1] [1;2;3])) print_int;
+	print_string ("crossover [2;2;1] [1;2;3] ---> ");
+	print_list (rev_list(crossover [2;2;1] [1;2;3])) print_int;
 	print_string ("crossover [8;9;6;5;2] [1;2;3] ---> ");
 	print_list (rev_list(crossover [8;9;6;5;2] [1;2;3])) print_int;
 	print_string ("crossover [\"test\";\"truc\";\"machin\"] [\"hello\";\"world\";\"machin\"] ---> ");
