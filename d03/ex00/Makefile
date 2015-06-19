@@ -6,13 +6,13 @@
 #    By: gleger <gleger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/01/18 17:03:33 by gleger            #+#    #+#              #
-#    Updated: 2015/06/19 11:12:59 by gleger           ###   ########.fr        #
+#    Updated: 2015/06/19 11:22:40 by gleger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	test
+NAME =	ft_graphics
 
-SRC =	test.ml
+SRC =	ft_graphics.ml
 
 OBJ =	$(SRC:.ml=.cmo)
 OPTOBJ = $(SRC:.ml=.cmx)

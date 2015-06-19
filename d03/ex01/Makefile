@@ -6,13 +6,13 @@
 #    By: gleger <gleger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/01/18 17:03:33 by gleger            #+#    #+#              #
-#    Updated: 2015/06/19 11:12:59 by gleger           ###   ########.fr        #
+#    Updated: 2015/06/19 17:05:40 by gleger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	test
+NAME =	gardening
 
-SRC =	test.ml
+SRC =	gardening.ml
 
 OBJ =	$(SRC:.ml=.cmo)
 OPTOBJ = $(SRC:.ml=.cmx)
