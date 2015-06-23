@@ -13,10 +13,13 @@
 let sum f1 f2 = f1 +. f2
 
 let main nb1 nb2 =
-	let f1 = float_of_string nb1 in
-	let f2 = float_of_string nb2 in
-	print_endline (nb1^" + "^nb2^" = "^(string_of_float (sum f1 f2)))
-
+	try
+		let f1 = float_of_string nb1 in
+		let f2 = float_of_string nb2 in
+		print_endline (nb1^" + "^nb2^" = "^(string_of_float (sum f1 f2)))
+	with
+		| Failure err -> print_endline "You bitch one isn't a float."
+		| _ -> print_endline "There was an error, just don't know which one."
 
 	(* ************************************************************************** *)
 let () =

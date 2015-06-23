@@ -21,13 +21,18 @@ let create_array file =
 	arrayz
 
 let main file =
-	let jokez = create_array file in
-	let input = open_in file in 
-	let nb_jokes = int_of_string (input_line input) in
-	close_in input;
-	Random.self_init ();
-	let index = Random.int nb_jokes in
-	print_endline jokez.(index)
+	try
+		let jokez = create_array file in
+		let input = open_in file in 
+		let nb_jokes = int_of_string (input_line input) in
+		close_in input;
+		Random.self_init ();
+		let index = Random.int nb_jokes in
+		print_endline jokez.(index)
+	with
+		| End_of_file -> print_endline "Seriously ?? Empty file, well that means no joke then !!"
+		| Failure err -> print_endline "Joke file doesn't seems well formated."
+		| _ -> print_endline "There was an error, just don't know which one."
 
 	(* ************************************************************************** *)
 let () =

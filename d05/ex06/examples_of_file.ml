@@ -32,8 +32,8 @@ let print_tuple src = print_array (get_left src) (Array.length (get_left src));p
 let print_list lst =
 	print_string "{\n";
 	let rec print_tuples lst = match lst with
-		| [] -> print_endline ")\n}"
-		| last::[] -> print_string "[|";
+		| [] -> print_endline "}"
+		| last::[] -> print_string "(";
 					print_tuple last;
 					print_endline ")\n}"
 		| first::suite -> print_string "(";
@@ -98,9 +98,6 @@ let transform filez =
 	data_lst := rev_list !data_lst;
 	size_lst := sizes_lst !data_lst;
 	size_lst := !size_lst;
-	(* print_endline (List.nth !data_lst 0);
-	print_int (List.nth !size_lst 0);
-	print_char '\n'; *)
 	let lst_return = ref [] in
 	for j=0 to (List.length !data_lst)-1 do
 		let farray = Array.make (List.nth !size_lst j) 0.0 in
@@ -110,24 +107,14 @@ let transform filez =
 		done;
 		
 		lst_return := (farray, (List.nth str_list (List.nth !size_lst j)))::!lst_return;
-		(* print_float farray.(33);
-		print_string " ";
-		print_endline (List.nth str_list (List.nth !size_lst j)); *)
 	done;
-	print_endline (string_of_int(List.length !lst_return));
-	(* size_lst *)lst_return := rev_list (!lst_return);
-	lst_return
-	(* print_int (List.nth size_lst 0) *)
-	
+	print_endline ("The file named: \""^ filez^"\" countains "^(string_of_int(List.length !lst_return))^" elements that have been tranformed.");
+	lst_return := rev_list (!lst_return);
+	lst_return	
 
 let main filez =
 	let lst = transform filez in
-	if !lst = [] then
-		print_endline "empty";
 	print_list !lst
-	(*else *)
-	(* print_int (List.nth !lst 0) *)
-	(* print_data  *)
 		
 	(* ************************************************************************** *)
 let () =

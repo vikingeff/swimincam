@@ -54,8 +54,19 @@ let get_dist ar1 ar2 =
 
 
 let main dim =
-	if dim <= 0 then
+	if dim < 0 then
 		raise (Invalid_argument "Error: Need a positive int value !")
+	else if dim = 0 then
+		begin
+			let coord1 = Array.make (dim+2) 0.0 in
+			let coord2 = Array.make (dim+2) 0.0 in
+			print_endline ("There is "^(string_of_int dim)^" dimension, but i created a case just for you.");
+			print_array coord1 (dim+2);
+			print_array coord2 (dim+2);
+			print_endline "The Euclidian distance between those two points is about :";
+			print_float (get_dist coord1 coord2);
+			print_char '\n';
+		end
 	else
 		begin
 			let coord1 = Array.make dim 0.0 in

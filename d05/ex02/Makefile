@@ -6,7 +6,7 @@
 #    By: gleger <gleger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/01/18 17:03:33 by gleger            #+#    #+#              #
-#    Updated: 2015/06/22 16:45:23 by gleger           ###   ########.fr        #
+#    Updated: 2015/06/23 13:09:46 by gleger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,6 @@ CMI = $(SRC:.ml=.cmi)
 NATIF =	ocamlopt.opt
 BYTECODE = ocamlc.opt
 CAMLDEP = ocamldep
-
-LIBS = /nfs/zfs-student-3/users/2013/gleger/.opam/4.02.0/lib/ocaml/unix.cma
 
 %.cmo:			%.ml
 	@echo "\033[1;36;m[Compiling $<]\t\033[0m: " | tr -d '\n'
@@ -45,12 +43,12 @@ depend:			.depend
 
 $(NAME).byt:	$(OBJ)
 	@echo "\033[1;35;m[Linking] \t\t\033[0m: " | tr -d '\n'
-	$(BYTECODE) -o $@ $(LIBS) $(OBJ)
+	$(BYTECODE) -o $@ $(OBJ)
 	@echo "\033[1;32;m[Success]\033[0m"
 
 $(NAME).opt:	$(OPTOBJ)
 	@echo "\033[1;35;m[Linking] \t\t\033[0m: " | tr -d '\n'
-	$(NATIF) -o $@ $(LIBS:.cma=.cmxa) $(OPTOBJ)
+	$(NATIF) -o $@ $(OPTOBJ)
 	@echo "\033[1;32;m[Success]\033[0m"
 
 $(NAME):		
