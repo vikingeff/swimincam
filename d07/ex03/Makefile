@@ -6,11 +6,11 @@
 #    By: gleger <gleger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/01/18 17:03:33 by gleger            #+#    #+#              #
-#    Updated: 2015/06/24 17:15:18 by gleger           ###   ########.fr        #
+#    Updated: 2015/06/25 09:19:26 by gleger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	dalek
+NAME =	army
 
 SRC =	people.ml\
 		doctor.ml\

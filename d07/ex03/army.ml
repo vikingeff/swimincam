@@ -10,28 +10,23 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
-class ['a, 'b] army (type:'a) (nb:'b)  = 
+class ['a] army (someone:'a list)  = 
 	object (me)
-		val _member:'a list = []
+		val _member:'a list = (*(someone::[])*)someone
 
 		method get_member = _member
-		method add peon = _member <- peon::me#get_member
+		method add peon = {< _member = (me#get_member @ [peon]) >}
+		method delete = {< _member = (List.tl me#get_member) >}
 
-		initializer 
-			begin
-				print_endline "Something popped .. aaaaaah ... it's a ... ";
-				for i=0 to nb do 
-
-				done
-			end
+		initializer print_endline "The army is coming .... "
 		
-		method to_string = "Name: "^me#get_name^" _hp: "^(string_of_int (me#get_hp))^" _shield: "^(string_of_bool me#get_shield)
-		method talk = print_endline (random_joke (Random.int 5))
-		method die = print_endline ("Emergency Temporal Shift!")
+		(* method to_string = "Name: "^me#get_name^" _hp: "^(string_of_int (me#get_hp))^" _shield: "^(string_of_bool me#get_shield) *)
+		(* method talk = print_endline (random_joke (Random.int 5)) *)
+		(* method die = print_endline ("Emergency Temporal Shift!") *)
 
-		method exterminate: People.people -> People.people = fun victim -> 
+		(* method exterminate: People.people -> People.people = fun victim -> 
 			begin
 				me#set_shield (not me#get_shield);
 				victim#die				
-			end
+			end *)
 	end
