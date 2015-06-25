@@ -12,55 +12,55 @@
 
 class alumonium = 
 	object (me)
-		inherit Atom.atom "Alumonium" "Al" 13 as super
+		inherit Atom.atom "Alumonium" "Al" 13 as mom	
 	end
 
 class gallium = 
 	object (me)
-		inherit Atom.atom "Gallium" "Ga" 31 as super
+		inherit Atom.atom "Gallium" "Ga" 31 as mom	
 	end
 
 class indium = 
 	object (me)
-		inherit Atom.atom "Indium" "In" 49 as super
+		inherit Atom.atom "Indium" "In" 49 as mom	
 	end
 
 class tin = 
 	object (me)
-		inherit Atom.atom "Tin" "Sn" 50 as super
+		inherit Atom.atom "Tin" "Sn" 50 as mom	
 	end
 
 class thallium = 
 	object (me)
-		inherit Atom.atom "Thallium" "Tl" 81 as super
+		inherit Atom.atom "Thallium" "Tl" 81 as mom	
 	end
 
 class lead = 
 	object (me)
-		inherit Atom.atom "Lead" "Pb" 82 as super
+		inherit Atom.atom "Lead" "Pb" 82 as mom	
 	end
 
 class bismuth = 
 	object (me)
-		inherit Atom.atom "Bismuth" "Bi" 83 as super
+		inherit Atom.atom "Bismuth" "Bi" 83 as mom	
 	end
 
 class ununtium = 
 	object (me)
-		inherit Atom.atom "Ununtium" "Uut" 113 as super
+		inherit Atom.atom "Ununtium" "Uut" 113 as mom	
 	end
 
 class flerovium = 
 	object (me)
-		inherit Atom.atom "Flerovium" "Fl" 114 as super
+		inherit Atom.atom "Flerovium" "Fl" 114 as mom	
 	end
 
 class ununpentium = 
 	object (me)
-		inherit Atom.atom "Ununpentium" "Uup" 115 as super
+		inherit Atom.atom "Ununpentium" "Uup" 115 as mom	
 	end
 
 class livermorium = 
 	object (me)
-		inherit Atom.atom "Livermorium" "Lv" 116 as super
+		inherit Atom.atom "Livermorium" "Lv" 116 as mom	
 	end

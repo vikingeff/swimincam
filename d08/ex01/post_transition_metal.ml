@@ -1,7 +1,7 @@
 (* ************************************************************************** *)
 (*                                                                            *)
 (*                                                        :::      ::::::::   *)
-(*   non_metal.ml                                       :+:      :+:    :+:   *)
+(*   post_transition_metal.ml                           :+:      :+:    :+:   *)
 (*                                                    +:+ +:+         +:+     *)
 (*   By: gleger <marvin@42.fr>                      +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
@@ -10,37 +10,57 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
-class hydrogen = 
+class aluminium = 
 	object (me)
-		inherit Atom.atom "Hydrogen" "H" 1 as mom	
+		inherit Atom.atom "Aluminium" "Al" 13 as mom	
 	end
 
-class carbon = 
+class gallium = 
 	object (me)
-		inherit Atom.atom "Carbon" "C" 6 as mom	
+		inherit Atom.atom "Gallium" "Ga" 31 as mom	
 	end
 
-class nitrogen = 
+class indium = 
 	object (me)
-		inherit Atom.atom "Nitrogen" "N" 7 as mom	
+		inherit Atom.atom "Indium" "In" 49 as mom	
 	end
 
-class oxygen = 
+class tin = 
 	object (me)
-		inherit Atom.atom "Oxygen" "O" 8 as mom	
+		inherit Atom.atom "Tin" "Sn" 50 as mom	
 	end
 
-class phosphorus = 
+class thallium = 
 	object (me)
-		inherit Atom.atom "Phosphorus" "P" 15 as mom	
+		inherit Atom.atom "Thallium" "Tl" 81 as mom	
 	end
 
-class sulfur = 
+class lead = 
 	object (me)
-		inherit Atom.atom "Sulfur" "S" 16 as mom	
+		inherit Atom.atom "Lead" "Pb" 82 as mom	
 	end
 
-class selenium = 
+class bismuth = 
 	object (me)
-		inherit Atom.atom "Selenium" "Se" 34 as mom	
+		inherit Atom.atom "Bismuth" "Bi" 83 as mom	
+	end
+
+class ununtium = 
+	object (me)
+		inherit Atom.atom "Ununtium" "Uut" 113 as mom	
+	end
+
+class flerovium = 
+	object (me)
+		inherit Atom.atom "Flerovium" "Fl" 114 as mom	
+	end
+
+class ununpentium = 
+	object (me)
+		inherit Atom.atom "Ununpentium" "Uup" 115 as mom	
+	end
+
+class livermorium = 
+	object (me)
+		inherit Atom.atom "Livermorium" "Lv" 116 as mom	
 	end
