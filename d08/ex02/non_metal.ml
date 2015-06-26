@@ -1,7 +1,7 @@
 (* ************************************************************************** *)
 (*                                                                            *)
 (*                                                        :::      ::::::::   *)
-(*   main.ml                                            :+:      :+:    :+:   *)
+(*   non_metal.ml                                       :+:      :+:    :+:   *)
 (*                                                    +:+ +:+         +:+     *)
 (*   By: gleger <marvin@42.fr>                      +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
@@ -10,15 +10,37 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
-let main () =
-	let hydro = new Non_metal.hydrogen in
-	let hydro2 = new Non_metal.hydrogen in
-	let pluto = new Actinoid.plutonium in
-	print_endline hydro#to_string;
-	print_endline hydro2#to_string;
-	print_endline pluto#to_string;
-	print_endline (hydro#name^" equals "^hydro2#name^" : "^(string_of_bool (hydro2#equals hydro)));
-	print_endline (pluto#name^" equals "^hydro#name^" : "^(string_of_bool (pluto#equals hydro)))
+class hydrogen = 
+	object (me)
+		inherit Atom.atom "Hydrogen" "H" 1 as mom	
+	end
 
-	(* ************************************************************************** *)
-let () = main ()
+class carbon = 
+	object (me)
+		inherit Atom.atom "Carbon" "C" 6 as mom	
+	end
+
+class nitrogen = 
+	object (me)
+		inherit Atom.atom "Nitrogen" "N" 7 as mom	
+	end
+
+class oxygen = 
+	object (me)
+		inherit Atom.atom "Oxygen" "O" 8 as mom	
+	end
+
+class phosphorus = 
+	object (me)
+		inherit Atom.atom "Phosphorus" "P" 15 as mom	
+	end
+
+class sulfur = 
+	object (me)
+		inherit Atom.atom "Sulfur" "S" 16 as mom	
+	end
+
+class selenium = 
+	object (me)
+		inherit Atom.atom "Selenium" "Se" 34 as mom	
+	end

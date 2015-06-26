@@ -11,14 +11,21 @@
 (* ************************************************************************** *)
 
 let main () =
-	let hydro = new Non_metal.hydrogen in
-	let hydro2 = new Non_metal.hydrogen in
-	let pluto = new Actinoid.plutonium in
-	print_endline hydro#to_string;
-	print_endline hydro2#to_string;
-	print_endline pluto#to_string;
-	print_endline (hydro#name^" equals "^hydro2#name^" : "^(string_of_bool (hydro2#equals hydro)));
-	print_endline (pluto#name^" equals "^hydro#name^" : "^(string_of_bool (pluto#equals hydro)))
+	let meth = new Gaz.methane in
+	let eth = new Gaz.ethane in
+	let octo = new Gaz.octane in
+	let twenty = new Gaz.eicosane in
+	let third = new Gaz.triacontane in
+	let twenty2 = new Gaz.eicosane in
+	
+	print_endline meth#to_string;
+	print_endline eth#to_string;
+	print_endline octo#to_string;
+	print_endline twenty#to_string;
+	print_endline third#to_string;
+	print_endline twenty2#to_string;
+	print_endline (twenty#name^" equals "^twenty2#name^" : "^(string_of_bool (twenty#equals twenty2)));
+	print_endline (twenty#name^" equals "^third#name^" : "^(string_of_bool (twenty#equals third)))
 
 	(* ************************************************************************** *)
 let () = main ()

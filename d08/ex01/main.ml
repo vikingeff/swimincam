@@ -12,6 +12,7 @@
 
 let main () =
 	let h2o = new Liquid.water in
+	let h2o2 = new Liquid.water in
 	let whis = new Liquid.whiskey in
 	let co2 = new Gaz.carbon_dioxyde in
 	let explo = new Other.tnt in
@@ -24,7 +25,9 @@ let main () =
 	print_endline explo#to_string;
 	print_endline penis#to_string;
 	print_endline fuch#to_string;
-	print_endline kino#to_string
+	print_endline kino#to_string;
+	print_endline (h2o#name^" equals "^h2o2#name^" : "^(string_of_bool (h2o2#equals h2o)));
+	print_endline (kino#name^" equals "^h2o#name^" : "^(string_of_bool (kino#equals h2o)))
 
 	(* ************************************************************************** *)
 let () = main ()

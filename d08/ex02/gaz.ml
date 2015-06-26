@@ -1,7 +1,7 @@
 (* ************************************************************************** *)
 (*                                                                            *)
 (*                                                        :::      ::::::::   *)
-(*   main.ml                                            :+:      :+:    :+:   *)
+(*   liquid.ml                                          :+:      :+:    :+:   *)
 (*                                                    +:+ +:+         +:+     *)
 (*   By: gleger <marvin@42.fr>                      +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
@@ -10,15 +10,28 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
-let main () =
-	let hydro = new Non_metal.hydrogen in
-	let hydro2 = new Non_metal.hydrogen in
-	let pluto = new Actinoid.plutonium in
-	print_endline hydro#to_string;
-	print_endline hydro2#to_string;
-	print_endline pluto#to_string;
-	print_endline (hydro#name^" equals "^hydro2#name^" : "^(string_of_bool (hydro2#equals hydro)));
-	print_endline (pluto#name^" equals "^hydro#name^" : "^(string_of_bool (pluto#equals hydro)))
+class methane =
+	object (me)
+		inherit Alkane.alkane 1 as mom
+	end
 
-	(* ************************************************************************** *)
-let () = main ()
+class ethane =
+	object (me)
+		inherit Alkane.alkane 2 as mom
+	end
+
+class octane =
+	object (me)
+		inherit Alkane.alkane 8 as mom
+	end
+
+class eicosane =
+	object (me)
+		inherit Alkane.alkane 20 as mom
+	end
+
+class triacontane =
+	object (me)
+		inherit Alkane.alkane 30 as mom
+	end
+	
