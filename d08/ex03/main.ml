@@ -1,7 +1,7 @@
 (* ************************************************************************** *)
 (*                                                                            *)
 (*                                                        :::      ::::::::   *)
-(*   liquid.ml                                          :+:      :+:    :+:   *)
+(*   main.ml                                            :+:      :+:    :+:   *)
 (*                                                    +:+ +:+         +:+     *)
 (*   By: gleger <marvin@42.fr>                      +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
@@ -10,33 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
-class carbon_dioxyde =
-	object (me)
-		inherit Molecule.molecule "Carbon Dioxyde" [(new Non_metal.carbon); new Non_metal.oxygen; new Non_metal.oxygen] as mom
-	end
+let main () =
+	print_endline "Yes reaction is an interface see the file : reaction.ml "
 
-class methane =
-	object (me)
-		inherit Alkane.alkane 1 as mom
-	end
-
-class ethane =
-	object (me)
-		inherit Alkane.alkane 2 as mom
-	end
-
-class octane =
-	object (me)
-		inherit Alkane.alkane 8 as mom
-	end
-
-class eicosane =
-	object (me)
-		inherit Alkane.alkane 20 as mom
-	end
-
-class triacontane =
-	object (me)
-		inherit Alkane.alkane 30 as mom
-	end
-	
+	(* ************************************************************************** *)
+let () = main ()

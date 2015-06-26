@@ -6,17 +6,15 @@
 #    By: gleger <gleger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/01/18 17:03:33 by gleger            #+#    #+#              #
-#    Updated: 2015/06/26 08:52:19 by gleger           ###   ########.fr        #
+#    Updated: 2015/06/26 10:01:33 by gleger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	alkanes
+NAME =	reactions
 
 SRC =	atom.ml\
 		molecule.ml\
-		non_metal.ml\
-		alkane.ml\
-		gaz.ml\
+		reaction.ml\
 		main.ml
 
 OTHER = $(SRC:.ml=.o)
